@@ -69,7 +69,7 @@ class RouterInfo:
         :returns: JSON with last boot time and uptime in seconds
         """
         r = self.__get('uptime()')
-        since = r.partition(':')[2].partition('(')[0]
+        since = r.partition(':')[2].partition('(')[0][1:]
         up = r.partition('(')[2].partition(' ')[0]
         return json.loads('{' + '"since":"{}", "uptime":"{}"'.format(since, up) + '}')
 
