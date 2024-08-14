@@ -83,14 +83,3 @@ if __name__ == "__main__":
     # cpu温度  
     if param == "cpu_temperature":
         print(ri.get_cpu_temperature()['cpu_temperature']) 
-        
-        
-    #print("Settings  : " + str(ri.get_settings()))
-    #print("IP addr   : " + str(ri.get_lan_ip_address()))
-    #print("Netmask   : " + str(ri.get_lan_netmask()))
-    #print("Gateway   : " + str(ri.get_lan_gateway()))
-    #print("Clients   : " + str(ri.get_clients_fullinfo()))
-    #print("Clients   : " + str(ri.get_clients_info()))
-    #print("Client   : " + str(ri.get_client_info('B8:2C:A0:5F:37:52')))
-    #print("DHCP      : " + str(ri.get_dhcp_list()))
-    #print("Online    : " + str(ri.get_online_clients()))
