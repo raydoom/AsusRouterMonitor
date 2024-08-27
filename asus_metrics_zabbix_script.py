@@ -4,7 +4,7 @@ from RouterInfo import RouterInfo
 param = sys.argv[1]
 
 if __name__ == "__main__":
-    ri = RouterInfo("192.168.2.1", "admin", "<<YOUR PASSWORD>>")
+    ri = RouterInfo("192.168.1.1", "maxd", "Mxd.12100")
     
     # 启动时间
     if param == "uptime":
@@ -72,6 +72,10 @@ if __name__ == "__main__":
     if param == "status_wan":
         print(ri.get_status_wan()['status'])
         
+    # wan口ip地址
+    if param == "wan_ip":
+        print(ri.get_status_wan()['ipaddr'])
+        
     # wan口联网状态    
     if param == "is_wan_online":
         is_wan_online = ri.is_wan_online()
@@ -83,3 +87,4 @@ if __name__ == "__main__":
     # cpu温度  
     if param == "cpu_temperature":
         print(ri.get_cpu_temperature()['cpu_temperature']) 
+        
